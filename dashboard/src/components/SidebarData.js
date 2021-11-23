@@ -1,6 +1,5 @@
 import React from "react";
 import * as AiIcons from "react-icons/ai";
-import * as FcIcons from "react-icons/fc";
 import * as ImIcons from "react-icons/im";
 
 export const SidebarData = [
