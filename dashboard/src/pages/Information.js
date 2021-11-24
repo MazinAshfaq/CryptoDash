@@ -1,7 +1,6 @@
-import "./App.css";
-
+import React from "react";
 function Information() {
-  return <div className="Info"></div>;
+  return <div className="info"></div>;
 }
 
 export default Information;

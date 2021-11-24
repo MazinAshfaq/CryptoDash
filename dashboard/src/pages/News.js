@@ -1,7 +1,6 @@
-import "./App.css";
-
+import React from "react";
 function News() {
-  return <div className="News"></div>;
+  return <div className="news"></div>;
 }
 
 export default News;
