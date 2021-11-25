@@ -1,11 +1,14 @@
 import React from "react";
+import "./Footer.css";
 
 function Footer() {
   return (
     <footer id="footer" className="footer">
       <a
         className="footerLink "
-        href="https://github.com/ntommy06/CS410P-FinalProject"
+        href="https://github.com/MazinAshfaq/CryptoDash"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         Github
       </a>
@@ -14,5 +17,4 @@ function Footer() {
     </footer>
   );
 }
-
 export default Footer;
