@@ -5,7 +5,7 @@ import "./Home.css";
 
 function Home() {
   let url =
-    "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false";
+    "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=false";
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState("");
   useEffect(() => {
@@ -16,7 +16,7 @@ function Home() {
         console.log(result.data);
       })
       .catch((error) => console.log(error));
-  });
+  }, []);
 
   const handleChange = (e) => {
     setSearch(e.target.value);
@@ -55,8 +55,10 @@ function Home() {
         </div>
       </div>
       {/* Outside of Coin Container */}
-      <div className="second-item">
-        <p>Hello</p>
+      <div className="second-item-container">
+        <div className="second-item">
+          <p>Hello</p>
+        </div>
       </div>
     </div>
   );
