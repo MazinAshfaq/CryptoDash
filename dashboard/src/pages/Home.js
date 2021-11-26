@@ -30,7 +30,6 @@ function Home() {
       <div className="coin-container">
         <div className="coin-app">
           <div className="coin-search">
-            <h1 className="coin-text">Search a currency</h1>
             <form>
               <input
                 type="text"
@@ -50,7 +49,6 @@ function Home() {
                 volume={coin.total_volume}
                 price={coin.current_price}
                 priceChange={coin.price_change_percentage_24h}
-                marketcap={coin.market_cap}
               />
             );
           })}
