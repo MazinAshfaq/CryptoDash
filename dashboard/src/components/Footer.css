@@ -8,9 +8,21 @@
   text-align: center;
   align-items: center;
   padding: 5px;
-  font-size: 0.7em;
+  font-size: 0.8em;
 }
 .footerLink {
   text-decoration: none;
   color: white;
+}
+.footerLink:hover {
+color: #5c5470;
+}
+.icon {
+  margin-bottom: 10px;
+  font-size: 2em;
+  text-align: center;
+  align-items: center;
+}
+#copyright {
+  margin-bottom: 5px;
 }

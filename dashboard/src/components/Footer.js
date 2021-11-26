@@ -1,4 +1,5 @@
 import React from "react";
+import * as AiIcons from "react-icons/ai";
 import "./Footer.css";
 
 function Footer() {
@@ -10,10 +11,28 @@ function Footer() {
         rel="noopener noreferrer"
         target="_blank"
       >
-        Github
+        <AiIcons.AiFillGithub className="icon">Github</AiIcons.AiFillGithub>
       </a>
-      <p id="copright"></p>
-      <p id="copyright">© 2021 Arafat Iqbal and Mazin Ashfaq.</p>
+      <p id="copyright">
+        ©2021{" "}
+        <a
+          className="footerLink"
+          href="https://www.linkedin.com/in/arafat-iqbal/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Arafat Iqbal
+        </a>{" "}
+        and{" "}
+        <a
+          className="footerLink"
+          href="https://www.linkedin.com/in/mazinashfaq/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Mazin Ashfaq.
+        </a>
+      </p>
     </footer>
   );
 }
