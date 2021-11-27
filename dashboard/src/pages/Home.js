@@ -13,9 +13,11 @@ function Home() {
   });
 
   return (
-    <div className="home">
-      <p>Home Page</p>
-    </div>
+    <>
+      <div className="home">
+        <p>Home Page</p>
+      </div>
+    </>
   );
 }
 
