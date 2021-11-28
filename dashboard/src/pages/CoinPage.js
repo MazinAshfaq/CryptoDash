@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Chart from "../components/Chart";
 import CoinData from "../components/CoinData";
-import coinGecko from "../apis/coinGecko";
+import axios from "axios";
 
 const CoinPage = () => {
   // const { id } = useParams();
   const [coinData, setCoinData] = useState({});
   const [isLoading, setIsLoading] = useState(false);
+
+  let id = "bitcoin";
 
   const formatData = (data) => {
     return data.map((el) => {
@@ -18,30 +20,38 @@ const CoinPage = () => {
     });
   };
 
-  let id = "bitcoin";
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
       const [day, week, year, detail] = await Promise.all([
-        coinGecko.get(`/coins/${id}/market_chart/`, {
-          params: {
-            vs_currency: "usd",
-            days: "1",
-          },
-        }),
-        coinGecko.get(`/coins/${id}/market_chart/`, {
-          params: {
-            vs_currency: "usd",
-            days: "7",
-          },
-        }),
-        coinGecko.get(`/coins/${id}/market_chart/`, {
-          params: {
-            vs_currency: "usd",
-            days: "365",
-          },
-        }),
-        coinGecko.get("/coins/markets/", {
+        axios.get(
+          `https://api.coingecko.com/api/v3/coins/${id}/market_chart/`,
+          {
+            params: {
+              vs_currency: "usd",
+              days: "1",
+            },
+          }
+        ),
+        axios.get(
+          `https://api.coingecko.com/api/v3/coins/${id}/market_chart/`,
+          {
+            params: {
+              vs_currency: "usd",
+              days: "7",
+            },
+          }
+        ),
+        axios.get(
+          `https://api.coingecko.com/api/v3/coins/${id}/market_chart/`,
+          {
+            params: {
+              vs_currency: "usd",
+              days: "365",
+            },
+          }
+        ),
+        axios.get("https://api.coingecko.com/api/v3/coins/markets/", {
           params: {
             vs_currency: "usd",
             ids: id,
@@ -63,10 +73,13 @@ const CoinPage = () => {
   }, []);
 
   const renderData = () => {
+    if (isLoading) {
+      return <div>Loading....</div>;
+    }
     return (
       <div className="coinPage">
-        <Chart />
-        <CoinData />
+        <Chart data={coinData} />
+        <CoinData data={coinData.detail} />
       </div>
     );
   };
