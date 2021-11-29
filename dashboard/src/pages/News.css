@@ -16,8 +16,11 @@
 .NewsContainer {
   display: flex;
   flex-direction: column;
+  text-decoration: none;
 }
-.NewsContainer h3 {
+.NewsContainer a {
+  text-decoration: none;
+  color: black;
 }
 .NewsContainer p {
 }
