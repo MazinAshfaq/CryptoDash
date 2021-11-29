@@ -1,12 +1,9 @@
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
   width: 100%;
+  bottom: 0;
   background-color: #2a2438;
   color: white;
   text-align: center;
-  align-items: center;
   padding: 5px;
   font-size: 0.8em;
 }
@@ -15,7 +12,7 @@
   color: white;
 }
 .footerLink:hover {
-color: #5c5470;
+  color: #5c5470;
 }
 .icon {
   margin-bottom: 10px;
