@@ -3,7 +3,7 @@ import axios from "axios";
 import Coin from "./Coin";
 import "./Home.css";
 import ReactPaginate from "react-paginate";
-// import coin from "./Coin";
+import News from "./News";
 
 function Home() {
   let url =
@@ -102,7 +102,7 @@ function Home() {
       </div>
       <div className="news-feed-container">
         <div className="news-feed">
-          <p>This is a news feed</p>
+          <News />
         </div>
       </div>
     </div>
