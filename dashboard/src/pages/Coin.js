@@ -19,12 +19,13 @@ const coin = ({ name, image, symbol, price, volume, priceChange }) => {
           </p>
           <p>
             <b>% Change</b>
+
+            {priceChange < 0 ? (
+              <p className="coin-percent red"> {priceChange.toFixed(2)}%</p>
+            ) : (
+              <p className="coin-percent green"> {priceChange.toFixed(2)}%</p>
+            )}
           </p>
-          {priceChange < 0 ? (
-            <p className="coin-percent red"> {priceChange.toFixed(2)}%</p>
-          ) : (
-            <p className="coin-percent green"> {priceChange.toFixed(2)}%</p>
-          )}
         </div>
       </div>
     </div>

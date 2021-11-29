@@ -15,7 +15,7 @@ function Home() {
 
   // Pagination
   const [pageNumber, setPageNumber] = useState(0);
-  const coinsPerPage = 6;
+  const coinsPerPage = 10;
   const pagesVisited = pageNumber * coinsPerPage;
 
   // Fetch Coin Data
@@ -67,6 +67,7 @@ function Home() {
     <div className="home-container">
       <div className="coin-container">
         <div className="coin-app">
+          <h1>List of Cryptos</h1>
           <div className="coin-search">
             <form>
               <input
@@ -77,6 +78,7 @@ function Home() {
               />
             </form>
           </div>
+
           {/* {filteredCoins.map((coin) => {})} */}
           {displayCoins}
           <ReactPaginate
