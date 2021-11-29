@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import News from "./pages/News";
 import Information from "./pages/Information";
+import CoinPage from "./pages/CoinPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/news" element={<News />} />
           <Route path="/information" element={<Information />} />
+          <Route path="/coinpage" element={<CoinPage />} />
         </Routes>
       </BrowserRouter>
       <Footer />
