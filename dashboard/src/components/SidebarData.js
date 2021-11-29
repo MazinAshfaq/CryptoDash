@@ -10,12 +10,6 @@ export const SidebarData = [
     cName: "nav-text",
   },
   {
-    title: "About",
-    path: "/about",
-    icon: <ImIcons.ImInfo />,
-    cName: "nav-text",
-  },
-  {
     title: "Search",
     path: "/information",
     icon: <AiIcons.AiOutlineFileSearch />,
@@ -25,6 +19,19 @@ export const SidebarData = [
     title: "News",
     path: "/news",
     icon: <ImIcons.ImNewspaper />,
+    cName: "nav-text",
+  },
+  {
+    title: "About",
+    path: "/about",
+    icon: <ImIcons.ImInfo />,
+    cName: "nav-text",
+  },
+
+  {
+    title: "Contact Us",
+    path: "/contactus",
+    icon: <AiIcons.AiOutlineMessage />,
     cName: "nav-text",
   },
 ];

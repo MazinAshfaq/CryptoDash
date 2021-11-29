@@ -8,6 +8,7 @@ import About from "./pages/About";
 import News from "./pages/News";
 import Information from "./pages/Information";
 import CoinPage from "./pages/CoinPage";
+import ContactUs from "./pages/ContactUs";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/news" element={<News />} />
           <Route path="/information" element={<Information />} />
           <Route path="/coinpage" element={<CoinPage />} />
+          <Route path="/contactus" element={<ContactUs />} />
         </Routes>
       </BrowserRouter>
       <Footer />

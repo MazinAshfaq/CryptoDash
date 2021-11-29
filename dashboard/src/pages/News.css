@@ -1,10 +1,8 @@
 .Page {
   padding: 20px;
-  background: #352f44;
+  background: #2a2438;
 }
 .NewsPage {
-  background: #352f44;
-  width: 100px;
   margin: auto;
   width: 50%;
   border-radius: 20px;
