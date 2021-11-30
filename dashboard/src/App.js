@@ -20,7 +20,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/news" element={<News />} />
           <Route path="/search" element={<Search />} />
-          <Route path="/coinpage:id" element={<CoinPage />} />
+          <Route path="/coinpage/:id" element={<CoinPage />} />
           <Route path="/contactus" element={<ContactUs />} />
         </Routes>
       </BrowserRouter>
