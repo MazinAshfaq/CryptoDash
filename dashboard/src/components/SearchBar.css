@@ -62,7 +62,7 @@ a {
 a:hover {
   background-color: lightgrey;
 }
-img {
+.dataItem img {
   margin-left: auto;
   margin-right: 20px;
   width: 30px;

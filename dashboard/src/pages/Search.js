@@ -21,6 +21,7 @@ function Search() {
 
   return (
     <div className="search-page">
+      {/* <h1>Search for a Crypto</h1> */}
       <SearchBar placeholder="Enter Crypto Name" data={coins} />
     </div>
   );

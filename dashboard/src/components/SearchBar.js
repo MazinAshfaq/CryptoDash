@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./SearchBar.css";
 import * as AiIcons from "react-icons/ai";
 
-function SearchBar({ placeholder, data }) {
+function SearchBar({ placeholder, data, key }) {
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
 
