@@ -6,7 +6,7 @@
   margin: auto;
   width: 50%;
   border-radius: 20px;
-  padding: 10px;
+  padding: 25px;
   background: #dbd8e3;
 }
 .NewsPage h1 {
@@ -21,8 +21,6 @@
 .NewsContainer a {
   text-decoration: none;
   color: black;
-}
-.NewsContainer p {
 }
 .newsImage {
   width: 100px;
