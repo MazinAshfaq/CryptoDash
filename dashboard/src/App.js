@@ -6,8 +6,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import News from "./pages/News";
-import Information from "./pages/Information";
+import Search from "./pages/Search";
 import CoinPage from "./pages/CoinPage";
+import ContactUs from "./pages/ContactUs";
 
 function App() {
   return (
@@ -18,8 +19,9 @@ function App() {
           <Route path="/" exact element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/news" element={<News />} />
-          <Route path="/information" element={<Information />} />
-          <Route path="/coinpage/:id" element={<CoinPage />} />
+          <Route path="/search" element={<Search />} />
+          <Route path="/coinpage:id" element={<CoinPage />} />
+          <Route path="/contactus" element={<ContactUs />} />
         </Routes>
       </BrowserRouter>
       <Footer />

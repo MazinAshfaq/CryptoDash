@@ -1,0 +1,31 @@
+.Page {
+  padding: 20px;
+  background: #2a2438;
+}
+.NewsPage {
+  margin: auto;
+  width: 50%;
+  border-radius: 20px;
+  padding: 25px;
+  background: #dbd8e3;
+}
+.NewsPage h1 {
+  padding-bottom: 20px;
+  text-align: center;
+}
+.NewsContainer {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+.NewsContainer a {
+  text-decoration: none;
+  color: black;
+}
+.newsImage {
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+  padding-bottom: 10px;
+  align-self: flex-end;
+}

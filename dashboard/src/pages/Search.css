@@ -1,0 +1,7 @@
+.search-page {
+  display: flex;
+  justify-content: center;
+  height: 90vh;
+  align-items: center;
+  background-color: #2a2438;
+}
