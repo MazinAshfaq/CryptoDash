@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+}
+
+.coinPage {
+  margin: 50px;
+  height: 100%;
+  display: block;
+  overflow: auto;
+}
+.grid {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 25px;
+  grid-row-gap: 25px;
+  /* position: absolute; */
+}
+
+.NPContainer {
+  grid-area: 1 / 1 / 2 / 3;
+}
+.OCContainer {
+  grid-area: 1 / 3 / 2 / 7;
+}
+.GContainer {
+  grid-area: 2 / 1 / 7 / 6;
+}
+.DContainer {
+  grid-area: 2 / 6 / 7 / 7;
+}
+
+.OCContainer {
+  background-color: #dbd8e3;
+  border-radius: 10px;
+  padding: 20px;
+}
+.NPContainer {
+  display: flex;
+  background-color: #dbd8e3;
+  border-radius: 10px;
+  padding: 20px;
+  overflow: hidden;
+}
+.NPContainer h1 {
+  margin: 6px;
+}
+.coinImg {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.DContainer {
+  background-color: #dbd8e3;
+  border-radius: 10px;
+  padding: 20px;
+}
+.GContainer {
+  background-color: #dbd8e3;
+  border-radius: 10px;
+  padding: 50px;
+}

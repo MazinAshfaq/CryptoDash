@@ -19,7 +19,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/news" element={<News />} />
           <Route path="/information" element={<Information />} />
-          <Route path="/coinpage" element={<CoinPage />} />
+          <Route path="/coinpage/:id" element={<CoinPage />} />
         </Routes>
       </BrowserRouter>
       <Footer />

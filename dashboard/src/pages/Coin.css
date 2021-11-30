@@ -1,3 +1,14 @@
+.link :focus,
+:hover,
+:visited,
+:link,
+:active {
+  text-decoration: none;
+  color: inherit;
+}
+.link :hover {
+  color: blueviolet;
+}
 .coin-container {
   display: flex;
   justify-content: center;
