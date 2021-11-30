@@ -4,7 +4,7 @@ import "./Coin.css";
 
 const coin = ({ id, name, image, symbol, price, volume, priceChange }) => {
   return (
-    <Link to={`./CoinPage/${id}`}>
+    <Link to={`./CoinPage/${id}`} style={{ textDecoration: "none" }}>
       <div className="coin-container">
         <div className="coin-row">
           <div className="coin">

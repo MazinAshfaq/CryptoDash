@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+html,
+body,
+#app,
+#root,
+#app > div {
+  height: 100%;
+}
 /* Color Scheme 
   #2A2438 - DARKEST
   #352F44 - DARK

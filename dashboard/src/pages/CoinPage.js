@@ -52,14 +52,28 @@ const CoinPage = () => {
     fetchData();
   }, []);
 
+  console.log(coinData);
   const renderData = () => {
     if (isLoading) {
-      return <div>Loading</div>;
+      return <div>Loading...</div>;
     }
     return (
       <div className="coinPage">
-        <CoinChart data={coinData} />
-        <CoinData />
+        <div className="grid">
+          <div className="NPContainer">
+            {/* <h1>{coinData.detail.name}</h1> */}
+          </div>
+          <div className="OCContainer">
+            <h1>Temp</h1>
+          </div>
+
+          <div className="GContainer">
+            <CoinChart data={coinData} />
+          </div>
+          <div className="DContainer">
+            <CoinData data={coinData.detail} />
+          </div>
+        </div>
       </div>
     );
   };

@@ -6,16 +6,15 @@ const CoinChart = ({ data }) => {
   const chartRef = useRef();
   const { day, week, year, detail } = data;
 
-  //console.log(data);
+  console.log("inside coinchart", data);
   useEffect(() => {
     if (chartRef && chartRef.current) {
       const myChart = new Chart(chartRef.current, {
         type: "line",
         data: {
-          //labels: day.x,
           datasets: [
             {
-              //label: `${data.detail.name} price`,
+              //label: `${detail.name} price`,
               data: day,
               backgroundColor: "rgba(174, 305, 194, 0.5)",
               borderColor: "rgba(101, 184, 145, 1",
@@ -64,11 +63,7 @@ const CoinChart = ({ data }) => {
     }
   });
 
-  return (
-    <div className="Container">
-      <canvas ref={chartRef}></canvas>
-    </div>
-  );
+  return <canvas ref={chartRef}></canvas>;
 };
 
 export default CoinChart;
