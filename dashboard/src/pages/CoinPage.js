@@ -63,7 +63,8 @@ const CoinPage = () => {
       <div className="coinPage">
         <div className="grid">
           <div className="NPContainer">
-            {/* <h1>{coinData.detail.name}</h1> */}
+            <img src={coinData.detail.image} className="coinImg"></img>
+            <h1>{coinData.detail.name}</h1>
           </div>
           <div className="OCContainer">
             <h1>Temp</h1>

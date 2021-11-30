@@ -2,6 +2,12 @@
   box-sizing: border-box;
 }
 
+.coinPage {
+  margin: 50px;
+  height: 100%;
+  display: block;
+  overflow: auto;
+}
 .grid {
   display: grid;
   height: 100%;
@@ -33,9 +39,19 @@
   padding: 20px;
 }
 .NPContainer {
+  display: flex;
   background-color: #dbd8e3;
   border-radius: 10px;
   padding: 20px;
+  overflow: hidden;
+}
+.NPContainer h1 {
+  margin: 6px;
+}
+.coinImg {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
 }
 
 .DContainer {
@@ -47,11 +63,4 @@
   background-color: #dbd8e3;
   border-radius: 10px;
   padding: 50px;
-}
-
-.coinPage {
-  margin: 50px;
-  height: 100%;
-  display: block;
-  overflow: auto;
 }
