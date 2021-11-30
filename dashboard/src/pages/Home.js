@@ -24,7 +24,7 @@ function Home() {
       .get(url)
       .then((result) => {
         setCoins(result.data);
-        console.log(result.data);
+        //console.log(result.data);
       })
       .catch((error) => console.log(error));
   }, []);
@@ -46,6 +46,7 @@ function Home() {
       return (
         <Coin
           key={coin.id}
+          id={coin.id}
           name={coin.name}
           image={coin.image}
           symbol={coin.symbol}

@@ -1,4 +1,4 @@
-export const historyOptions = {
+export const chartOptions = {
   lineHeightAnnotation: {
     always: true,
     hover: false,
@@ -11,10 +11,10 @@ export const historyOptions = {
   maintainAspectRatio: false,
   responsive: true,
   scales: {
-    xAxes: [
+    xAxis: [
       {
         type: "time",
-        distribution: "linear",
+        distrabution: "linear",
       },
     ],
   },
