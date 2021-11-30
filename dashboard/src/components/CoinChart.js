@@ -1,12 +1,25 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Chart } from "chart.js";
-import "./CoinPage.css";
+import "../pages/CoinPage.css";
 
 const CoinChart = ({ data }) => {
   const chartRef = useRef();
   const { day, week, year, detail } = data;
+  const [time, setTime] = useState("24h");
 
-  console.log("inside coinchart", data);
+  const timeFormat = () => {
+    switch (time) {
+      case "24h":
+        return day;
+      case "7d":
+        return week;
+      case "1y":
+        return year;
+      default:
+        return day;
+    }
+  };
+
   useEffect(() => {
     if (chartRef && chartRef.current) {
       const myChart = new Chart(chartRef.current, {
@@ -14,8 +27,8 @@ const CoinChart = ({ data }) => {
         data: {
           datasets: [
             {
-              //label: `${detail.name} price`,
-              data: day,
+              label: `${detail.name} Price`,
+              data: timeFormat(),
               backgroundColor: "rgba(174, 305, 194, 0.5)",
               borderColor: "rgba(101, 184, 145, 1",
               borderWidth: 2,
@@ -26,7 +39,7 @@ const CoinChart = ({ data }) => {
         },
         options: {
           legend: {
-            display: false,
+            display: true,
           },
           lineHeightAnnotation: {
             always: true,

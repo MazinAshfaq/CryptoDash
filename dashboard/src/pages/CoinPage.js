@@ -3,21 +3,22 @@ import { useParams } from "react-router-dom";
 import CoinData from "../components/CoinData";
 import CoinChart from "../components/CoinChart";
 import axios from "axios";
+import "./CoinPage.css";
 
 const CoinPage = () => {
   const { id } = useParams();
   const [coinData, setCoinData] = useState({});
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
-  let daysAPI = `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=1`;
-  let weekAPI = `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=7`;
-  let yearAPI = `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=365`;
-  let detailAPI = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${id}`;
+  // let daysAPI = `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=1`;
+  // let weekAPI = `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=7`;
+  // let yearAPI = `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=365`;
+  // let detailAPI = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${id}`;
 
-  let getDay = axios.get(daysAPI);
-  let getWeek = axios.get(weekAPI);
-  let getYear = axios.get(yearAPI);
-  let getDetail = axios.get(detailAPI);
+  // let getDay = axios.get(daysAPI);
+  // let getWeek = axios.get(weekAPI);
+  // let getYear = axios.get(yearAPI);
+  // let getDetail = axios.get(detailAPI);
 
   const formatData = (data) => {
     return data.map((el) => {
@@ -28,31 +29,32 @@ const CoinPage = () => {
     });
   };
 
+  const fetchData = async () => {
+    let endpoints = [
+      `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=1`,
+      `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=7`,
+      `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=365`,
+      `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${id}`,
+    ];
+
+    await Promise.all(endpoints.map((endpoint) => axios.get(endpoint))).then(
+      ([{ data: day }, { data: week }, { data: year }, { data: detail }]) => {
+        console.log({ day, week, year, detail });
+        setCoinData({
+          day: formatData(day.prices),
+          week: formatData(week.prices),
+          year: formatData(year.prices),
+          detail: detail[0],
+        });
+      }
+    );
+    setIsLoading(false);
+  };
+
   useEffect(() => {
-    const fetchData = async () => {
-      setIsLoading(true);
-      await axios.all([getDay, getWeek, getYear, getDetail]).then(
-        axios.spread((...allData) => {
-          let day = allData[0];
-          let week = allData[1];
-          let year = allData[2];
-          let detail = allData[3];
-
-          setCoinData({
-            day: formatData(day.data.prices),
-            week: formatData(week.data.prices),
-            year: formatData(year.data.prices),
-            detail: detail.data[0],
-          });
-        })
-      );
-      setIsLoading(false);
-    };
-
     fetchData();
   }, []);
 
-  console.log(coinData);
   const renderData = () => {
     if (isLoading) {
       return <div>Loading...</div>;
