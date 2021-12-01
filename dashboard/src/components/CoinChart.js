@@ -8,7 +8,7 @@ const CoinChart = ({ data }) => {
   const { day, week, year, detail } = data;
   const [time, setTime] = useState("24h");
 
-  const timeFormat = () => {
+  const Format = () => {
     switch (time) {
       case "24h":
         return day;
@@ -28,8 +28,8 @@ const CoinChart = ({ data }) => {
         data: {
           datasets: [
             {
-              label: `${detail.name} Price`,
-              data: timeFormat(),
+              //label: `${detail.name} Price`,
+              data: Format(),
               backgroundColor: "rgba(174, 305, 194, 0.5)",
               borderColor: "rgba(101, 184, 145, .4)",
               borderWidth: 2,

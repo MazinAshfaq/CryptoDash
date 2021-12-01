@@ -4,8 +4,7 @@ import CoinData from "../components/CoinData";
 import CoinChart from "../components/CoinChart";
 import axios from "axios";
 import "./CoinPage.css";
-import News from "../pages/News";
-import SearchBar from "../components/SearchBar";
+import News from "../components/News";
 
 const CoinPage = () => {
   const { id } = useParams();
@@ -82,14 +81,6 @@ const CoinPage = () => {
               </h1>
             </div>
           </div>
-          {/* <div className="SContainer">
-            <SearchBar
-              placeholder="Enter Crypto Name"
-              data={coins}
-              page={page}
-            />
-          </div> */}
-
           <div className="GContainer">
             <CoinChart data={coinData} />
           </div>
@@ -97,8 +88,8 @@ const CoinPage = () => {
             <CoinData data={coinData.detail} />
           </div>
           <div className="NContainer">
-            <h2>{coinData.detail.name} News</h2>
-            <News data={coinData.detail.id} />
+            <h2>Crypto News</h2>
+            <News />
           </div>
         </div>
       </div>

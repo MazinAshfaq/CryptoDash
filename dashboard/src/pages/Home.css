@@ -1,47 +1,48 @@
+html,
+body,
+#app,
+#root,
+#app > div {
+  height: 100%;
+  min-width: 740px;
+}
+
 .home-container {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
+  display: block;
+  height: 100%;
   background-color: #2a2438;
 }
-.second-item-container {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 30px;
-  flex: 46%;
+.home-grid {
+  display: grid;
+  height: 100%;
+  /* margin: 50px; */
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  /* grid-column-gap: 25px;
+  grid-row-gap: 25px; */
 }
-.second-item {
-  display: flex;
-  flex-direction: column;
+.home-coin-container {
+  grid-area: 1 / 1 / 7 / 4;
+}
+.graph-item-container {
+  grid-area: 1 / 4 / 4 / 7;
+}
+.news-item-container {
+  grid-area: 4 / 4 / 7 / 7;
+}
+
+.home-coin-container {
+  display: block;
+  margin: 25px;
   background-color: #dbd8e3;
-  padding-top: 10px;
   border-radius: 20px;
-  width: 100%;
+  text-align: center;
+  min-width: 720px;
 }
-.coin-container {
-  display: flex;
-  flex-wrap: wrap;
-  flex: 50%;
-  padding: 30px;
-  justify-content: center;
+.home-coin-container h1 {
+  margin: 25px;
 }
-.coin-app {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 10px;
-  color: #2a2438;
-  border-radius: 20px;
-  background-color: #dbd8e3;
-}
-@media only screen and (max-width: 1704px) {
-  .coin-app {
-    align-items: center;
-  }
-  .coin-container {
-    justify-content: center;
-  }
-}
+
 .coin-search {
   margin-bottom: 20px;
   display: flex;
@@ -49,9 +50,6 @@
   justify-content: center;
   align-content: center;
   padding: 20px;
-}
-.coin-app h1 {
-  padding: 10px;
 }
 
 .coin-text {
@@ -72,12 +70,31 @@
 .coin-input::placeholder {
   color: #e2e2e2;
 }
-.heading {
-  display: flex;
-  text-align: right;
-  justify-content: center;
-  width: 50%;
+
+.link {
+  padding: 10px;
 }
+.graph-item-container {
+  text-align: center;
+  background-color: #dbd8e3;
+  border-radius: 20px;
+  margin: 25px;
+  max-height: 600px;
+  min-width: 700px;
+  position: relative;
+  padding: 50px;
+}
+.news-item-container {
+  background-color: #2a2438;
+  border-radius: 20px;
+  margin: 25px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-radius: 20px;
+  padding: 25px;
+  background: #dbd8e3;
+}
+
 .paginationBttns {
   width: 80%;
   height: 40px;
@@ -101,4 +118,41 @@
 .paginationActive a {
   color: #dbd8e3;
   background-color: #2a2438;
+}
+
+@media only screen and (max-width: 1704px) {
+  .coin-app {
+    align-items: center;
+  }
+  .coin-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1281px) {
+  /* hi-res laptops and desktops */
+  .home-container {
+    height: auto;
+  }
+  .home-grid {
+    position: relative;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
+}
+@media (min-width: 801px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+@media (min-width: 600px) {
+  /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+}
+@media (min-width: 480px) {
+  /* smartphones, Android phones, landscape iPhone */
+}
+@media (min-width: 320px) {
+  /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
 }
