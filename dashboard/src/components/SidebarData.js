@@ -2,6 +2,7 @@ import React from "react";
 import * as AiIcons from "react-icons/ai";
 import * as ImIcons from "react-icons/im";
 import * as GrIcons from "react-icons/gr";
+import * as RiIcons from "react-icons/ri";
 
 export const SidebarData = [
   {
@@ -26,6 +27,11 @@ export const SidebarData = [
     title: "Currency",
     path: "/currency",
     icon: <GrIcons.GrCurrency />,
+    cName: "nav-text",
+  },
+    title: "Exchange Coins",
+    path: "/trading",
+    icon: <RiIcons.RiExchangeDollarLine />,
     cName: "nav-text",
   },
   {
