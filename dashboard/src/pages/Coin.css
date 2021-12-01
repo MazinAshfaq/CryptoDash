@@ -6,14 +6,14 @@
   color: inherit;
 }
 .link :hover {
-  color: blueviolet;
+  background-color: #5c5470;
 }
 
 .coin-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 15px;
+  padding: 25px;
 }
 
 @media only screen and (max-width: 1704) {
