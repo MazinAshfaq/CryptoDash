@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./News.css";
 
-function News() {
+function News({}) {
   const [article, setArticle] = useState([]);
 
   const options = {
@@ -35,28 +35,21 @@ function News() {
 
   const displayNews = article.map((articles) => {
     return (
-      <div className="NewsContainer" key={articles.name}>
-        <a href={articles.url}>
-          {" "}
-          <h3>{articles.name}</h3>
-        </a>
-        <p>{articles.description}</p>
-        {/* TODO: Make sure the image doesn't collapse the website if it doesn't exist */}
-        <div className="newsImage">
-          <img src={articles.image.thumbnail.contentUrl} alt="Crypto News" />
+      <a href={articles.url}>
+        <div className="NewsContainer" key={articles.name}>
+          <div className="newsImage">
+            <img src={articles.image.thumbnail.contentUrl} alt="Crypto News" />
+          </div>
+          <div className="newsText">
+            <h3>{articles.name}</h3>
+            <p>{articles.description}</p>
+          </div>
         </div>
-      </div>
+      </a>
     );
   });
 
-  return (
-    <div className="Page">
-      <div className="NewsPage">
-        <h1>News Articles for Cryptos</h1>
-        {displayNews}
-      </div>
-    </div>
-  );
+  return displayNews;
 }
 
 export default News;

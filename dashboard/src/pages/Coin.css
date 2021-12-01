@@ -1,5 +1,4 @@
 .link :focus,
-:hover,
 :visited,
 :link,
 :active {
@@ -9,10 +8,14 @@
 .link :hover {
   color: blueviolet;
 }
+
 .coin-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  padding: 15px;
 }
+
 @media only screen and (max-width: 1704) {
   .coin-container {
     display: flex;

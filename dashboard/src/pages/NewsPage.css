@@ -1,0 +1,15 @@
+.Page {
+  padding: 20px;
+  background: #2a2438;
+}
+.NewsPage {
+  margin: auto;
+  width: 50%;
+  border-radius: 20px;
+  padding: 25px;
+  background: #dbd8e3;
+}
+.NewsPage h1 {
+  padding-bottom: 20px;
+  text-align: center;
+}
