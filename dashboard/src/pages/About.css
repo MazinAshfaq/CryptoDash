@@ -1,21 +1,141 @@
 .about-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
   background-color: #2a2438;
 }
 
 .project {
-  grid-area: 3 / 2 / 4 / 5;
-}
-
-.project {
-  margin: 25px;
+  margin: 100px;
+  padding: 70px;
+  width: 60%;
   background-color: #dbd8e3;
   border-radius: 20px;
-  text-align: center;
   min-width: 720px;
+}
+
+.project h1 {
+  padding: 20px;
+  text-align: center;
+  animation: fadeIn linear 5s;
+  -webkit-animation: fadeIn linear 5s;
+  -moz-animation: fadeIn linear 5s;
+  -o-animation: fadeIn linear 5s;
+  -ms-animation: fadeIn linear 5s;
+}
+.project h2 {
+  padding: 20px;
+  text-align: center;
+  animation: fadeIn linear 5s;
+  -webkit-animation: fadeIn linear 5s;
+  -moz-animation: fadeIn linear 5s;
+  -o-animation: fadeIn linear 5s;
+  -ms-animation: fadeIn linear 5s;
+}
+
+.project p {
+  padding: 20px;
+  text-align: center;
+  animation: fadeIn linear 5s;
+  -webkit-animation: fadeIn linear 5s;
+  -moz-animation: fadeIn linear 5s;
+  -o-animation: fadeIn linear 5s;
+  -ms-animation: fadeIn linear 5s;
+}
+
+.src {
+  text-align: center;
+  width: 100%;
+  margin-top: -15px;
+  margin-bottom: 10px;
+}
+.api img {
+  height: 300px;
+  width: 300px;
+}
+
+.api {
+  display: flex;
+  align-items: center;
+}
+
+.tech {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech div img {
+  height: 250px;
+  width: 250px;
+  animation: fadeIn linear 5s;
+  -webkit-animation: fadeIn linear 5s;
+  -moz-animation: fadeIn linear 5s;
+  -o-animation: fadeIn linear 5s;
+  -ms-animation: fadeIn linear 5s;
+  transition: transform 250ms;
+}
+
+.tech div img:hover {
+  transform: translateY(-20px);
+}
+.tech div {
+  text-align: center;
+  padding: 35px;
+}
+
+.featurelist {
+  display: flex;
+  justify-content: center;
+}
+.flist {
+  float: left;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
