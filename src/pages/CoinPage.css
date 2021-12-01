@@ -80,7 +80,8 @@
   border-radius: 10px;
   padding: 20px;
   min-width: 300px;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 .GContainer {
   position: relative;
