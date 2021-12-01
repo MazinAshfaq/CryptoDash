@@ -53,6 +53,7 @@ function Currency() {
           volume={coin.total_volume}
           price={coin.current_price}
           priceChange={coin.price_change_percentage_24h}
+          curr={curr}
         />
       );
     });
@@ -78,19 +79,21 @@ function Currency() {
               />
             </form>
           </div>
+          <h3>Change Currency</h3>
           <div className="options">
             <select
+              className="selectTag"
               onChange={(e) => {
                 setCurr(e.target.value);
               }}
             >
-              <option value="USD">USD</option>
-              <option value="CAD">CAD</option>
-              <option value="AED">AED</option>
+              <option value="USD">USD $</option>
+              <option value="CAD">CAD C$</option>
+              <option value="AED">AED د.إ</option>
               <option value="CHF">CHF</option>
-              <option value="EUR">EUR</option>
-              <option value="GBP">GBP</option>
-              <option value="KWD">KWD</option>
+              <option value="EUR">EUR €</option>
+              <option value="GBP">GBP £</option>
+              <option value="KWD">KWD د.ك</option>
             </select>
           </div>
           <div className="currency-coin-app">

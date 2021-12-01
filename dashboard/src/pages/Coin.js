@@ -2,7 +2,34 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Coin.css";
 
-const coin = ({ id, name, image, symbol, price, volume, priceChange }) => {
+const coin = ({
+  id,
+  name,
+  image,
+  symbol,
+  price,
+  volume,
+  priceChange,
+  curr,
+}) => {
+  const formatCurr = () => {
+    switch (curr) {
+      case "CAD":
+        return "C$";
+      case "AED":
+        return "د.إ";
+      case "CHF":
+        return "CHF";
+      case "EUR":
+        return "€";
+      case "GBP":
+        return "£";
+      case "KWD":
+        return "د.ك";
+      default:
+        return "$";
+    }
+  };
   return (
     <Link to={`./CoinPage/${id}`} className="link">
       <div className="coin-container">
@@ -14,10 +41,12 @@ const coin = ({ id, name, image, symbol, price, volume, priceChange }) => {
           </div>
           <div className="coin-data">
             <p className="coin-price">
-              <b>Price: </b> ${price.toLocaleString()}
+              <b>Price: </b> {formatCurr()}
+              {price.toLocaleString()}
             </p>
             <p className="coin-volume">
-              <b>Volume: </b> ${volume.toLocaleString()}
+              <b>Volume: </b> {formatCurr()}
+              {volume.toLocaleString()}
             </p>
             <span>
               <b>% Change</b>

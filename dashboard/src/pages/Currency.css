@@ -3,12 +3,12 @@
   background-color: #dbd8e3;
   text-align: center;
   min-width: 100px;
-  min-height: 100vh;
+  min-height: 110vh;
   padding: 40px;
 }
 .currency-container {
   display: block;
-  height: 100%;
+  height: 110vh;
   background-color: #8e7bbb;
 }
 .currency-coin-search {
@@ -31,6 +31,9 @@
 }
 .currency-coin-input::placeholder {
   color: #e2e2e2;
+}
+.currency-coin-container h3 {
+  margin-bottom: 10px;
 }
 .paginBttns {
   width: 80%;
@@ -56,6 +59,16 @@
   color: #dbd8e3;
   background-color: #2a2438;
 }
-.options {
-  margin-bottom: 20px;
+.selectTag {
+  margin-bottom: 1em;
+  /* padding: 0.25em; */
+  border: 0;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+  background-color: #2a2438;
+  color: #dbd8e3;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  border-radius: 5px;
 }
