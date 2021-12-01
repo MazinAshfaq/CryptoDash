@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import CoinData from "../components/CoinData";
 import CoinChart from "../components/CoinChart";
 import axios from "axios";
+
 import "./CoinPage.css";
 import News from "../components/News";
 

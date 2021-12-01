@@ -9,7 +9,7 @@ import NewsPage from "./pages/NewsPage";
 import Search from "./pages/Search";
 import CoinPage from "./pages/CoinPage";
 import ContactUs from "./pages/ContactUs";
-
+import Currency from "./pages/Currency";
 function App() {
   return (
     <>
@@ -22,6 +22,7 @@ function App() {
           <Route path="/search" element={<Search />} />
           <Route path="/coinpage/:id" element={<CoinPage />} />
           <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/currency" element={<Currency />} />
         </Routes>
       </BrowserRouter>
       <Footer />
