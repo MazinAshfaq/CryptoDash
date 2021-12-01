@@ -1,7 +1,7 @@
 import React from "react";
 import * as AiIcons from "react-icons/ai";
 import * as ImIcons from "react-icons/im";
-
+import * as RiIcons from "react-icons/ri";
 export const SidebarData = [
   {
     title: "Home",
@@ -19,6 +19,12 @@ export const SidebarData = [
     title: "News",
     path: "/news",
     icon: <ImIcons.ImNewspaper />,
+    cName: "nav-text",
+  },
+  {
+    title: "Exchange Coins",
+    path: "/trading",
+    icon: <RiIcons.RiExchangeDollarLine />,
     cName: "nav-text",
   },
   {
