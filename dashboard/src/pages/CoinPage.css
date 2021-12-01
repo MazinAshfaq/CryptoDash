@@ -55,6 +55,18 @@
   margin-right: 10px;
 }
 
+.coinImg {
+  animation: spin-animation 4s infinite;
+}
+@keyframes spin-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
 .DContainer {
   background-color: #dbd8e3;
   border-radius: 10px;

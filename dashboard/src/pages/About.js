@@ -29,38 +29,56 @@ function About() {
           security.
         </p>
         <br />
-        <a href="https://www.nerdwallet.com/article/investing/cryptocurrency-7-things-to-know">
-          Source: NerdWallet
-        </a>
+        <div className="src">
+          <a href="https://www.nerdwallet.com/article/investing/cryptocurrency-7-things-to-know">
+            Source: NerdWallet
+          </a>
+        </div>
 
         <h2>Technology Used</h2>
         <div className="tech">
-          <div>
+          <div className="techlogo">
             <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" />
             <h3>ReactJS</h3>
           </div>
-          <div>
+          <div className="techlogo">
             <img src="https://www.freepnglogos.com/uploads/javascript-png/javascript-shield-logo-icon-2.png" />
             <h3>JavaScript</h3>
           </div>
-          <div>
+          <div className="techlogo">
             <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" />
             <h3>CSS</h3>
           </div>
-          <div>
+          <div className="techlogo">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" />
             <h3>HTML</h3>
           </div>
-          <div>
+          <div className="techlogo">
             <img src="https://www.chartjs.org/img/chartjs-logo.svg" />
             <h3>Chart.js</h3>
           </div>
-          <div>
+          <div className="techlogo">
             <img src="https://static.coingecko.com/s/api_landing_page_2x-c8a9b94a199c90fd02f99ccb3484b7911dbf18d1f083339577441d0c411d02d2.png" />
             <h3>CoinGecko APi</h3>
           </div>
         </div>
-        {/* <h2>Features</h2> */}
+        <h2>Features</h2>
+        <div className="featurelist">
+          <div className="flist">
+            <ul>
+              <li>Feature</li>
+              <li>Feature</li>
+              <li>Feature</li>
+            </ul>
+          </div>
+          <div className="flist">
+            <ul>
+              <li>Feature</li>
+              <li>Feature</li>
+              <li>Feature</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   );
