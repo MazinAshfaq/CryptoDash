@@ -1,0 +1,19 @@
+.tGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.tList {
+  grid-area: 2 / 3 / 6 / 5;
+}
+
+.tList {
+  margin: 25px;
+  background-color: #dbd8e3;
+  border-radius: 20px;
+  text-align: center;
+  min-width: 720px;
+}
