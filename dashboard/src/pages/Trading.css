@@ -1,19 +1,35 @@
 .tGrid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+
+  height: 100%;
+  background-color: #2a2438;
+  align-items: center;
 }
 
 .tList {
-  grid-area: 2 / 3 / 6 / 5;
+  grid-area: 1 / 5 / 7 / 4;
 }
 
 .tList {
   margin: 25px;
+  padding: 50px;
   background-color: #dbd8e3;
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.tList h1 {
   text-align: center;
-  min-width: 720px;
+  padding: 15px;
+  padding-top: 30px;
+}
+
+.tcoinContainer {
+  display: flex;
 }

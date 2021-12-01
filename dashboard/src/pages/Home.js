@@ -58,7 +58,6 @@ function Home() {
       })
       .catch((error) => console.log(error));
     fetchData();
-    console.log(chartData);
   }, []);
 
   // Update page as search is comencsed

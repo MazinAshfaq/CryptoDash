@@ -130,6 +130,7 @@ body,
 }
 
 @media (max-width: 1281px) {
+  /* hi-res laptops and desktops */
   .home-container {
     height: auto;
   }

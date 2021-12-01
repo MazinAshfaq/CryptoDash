@@ -17,15 +17,6 @@ const CoinPage = () => {
 
   const [coins, setCoins] = useState([]);
 
-  useEffect(() => {
-    axios
-      .get(url)
-      .then((result) => {
-        setCoins(result.data);
-      })
-      .catch((error) => console.log(error));
-  }, []);
-
   const formatData = (data) => {
     return data.map((el) => {
       return {
