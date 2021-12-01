@@ -6,19 +6,20 @@
   color: inherit;
 }
 .link :hover {
-  color: blueviolet;
+  background-color: #5c5470;
 }
 
 .coin-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 15px;
+  padding: 25px;
   transition: transform 250ms;
 }
 
 .coin-container:hover {
   transform: translateY(-10px);
+
 }
 
 @media only screen and (max-width: 1704) {
@@ -71,7 +72,7 @@
 }
 
 .coin-volume {
-  width: 155px;
+  width: 50px;
 }
 
 .coin-marketcap {

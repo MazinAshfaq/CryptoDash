@@ -40,7 +40,7 @@ body,
   min-width: 720px;
 }
 .home-coin-container h1 {
-  margin: 25px;
+  margin: 20px;
 }
 
 .coin-search {
@@ -71,9 +71,9 @@ body,
   color: #e2e2e2;
 }
 
-.link {
+/* .link {
   padding: 10px;
-}
+} */
 .graph-item-container {
   text-align: center;
   background-color: #dbd8e3;

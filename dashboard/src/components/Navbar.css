@@ -25,6 +25,7 @@
   top: 0;
   left: -100%;
   transition: 850ms;
+  box-shadow: 1px 1px 50px black;
 }
 .nav-menu.active {
   left: 0;

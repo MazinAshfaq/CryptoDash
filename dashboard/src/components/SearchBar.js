@@ -45,8 +45,9 @@ function SearchBar({ placeholder, data, key, page }) {
       {filteredData.length !== 0 && (
         <div className="dataResult">
           {filteredData.slice(0, 15).map((value, key) => {
+            key = value.id;
             return (
-              <a className="dataItem" href={`./CoinPage/${value.id}`}>
+              <a className="dataItem" href={`./CoinPage/${key}`}>
                 <p>{value.name} </p>
                 <img src={value.image} alt="Crypto Logo" />
               </a>
