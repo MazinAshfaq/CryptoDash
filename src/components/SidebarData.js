@@ -29,6 +29,7 @@ export const SidebarData = [
     icon: <GrIcons.GrCurrency />,
     cName: "nav-text",
   },
+  {
     title: "Exchange Coins",
     path: "/trading",
     icon: <RiIcons.RiExchangeDollarLine />,
