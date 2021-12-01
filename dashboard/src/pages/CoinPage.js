@@ -4,21 +4,28 @@ import CoinData from "../components/CoinData";
 import CoinChart from "../components/CoinChart";
 import axios from "axios";
 import "./CoinPage.css";
+import News from "../pages/News";
+import SearchBar from "../components/SearchBar";
 
 const CoinPage = () => {
   const { id } = useParams();
   const [coinData, setCoinData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+  let page = window.location.href;
 
-  // let daysAPI = `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=1`;
-  // let weekAPI = `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=7`;
-  // let yearAPI = `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=365`;
-  // let detailAPI = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${id}`;
+  let url =
+    "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=false";
 
-  // let getDay = axios.get(daysAPI);
-  // let getWeek = axios.get(weekAPI);
-  // let getYear = axios.get(yearAPI);
-  // let getDetail = axios.get(detailAPI);
+  const [coins, setCoins] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(url)
+      .then((result) => {
+        setCoins(result.data);
+      })
+      .catch((error) => console.log(error));
+  }, []);
 
   const formatData = (data) => {
     return data.map((el) => {
@@ -39,7 +46,6 @@ const CoinPage = () => {
 
     await Promise.all(endpoints.map((endpoint) => axios.get(endpoint))).then(
       ([{ data: day }, { data: week }, { data: year }, { data: detail }]) => {
-        console.log({ day, week, year, detail });
         setCoinData({
           day: formatData(day.prices),
           week: formatData(week.prices),
@@ -65,16 +71,34 @@ const CoinPage = () => {
           <div className="NPContainer">
             <img src={coinData.detail.image} className="coinImg"></img>
             <h1>{coinData.detail.name}</h1>
+            <div className="price">
+              <h1>${coinData.detail.current_price.toFixed(2)}</h1>
+              <h1
+                className={
+                  coinData.detail.price_change_24h < 0 ? "red" : "green"
+                }
+              >
+                {coinData.detail.price_change_percentage_24h.toFixed(2)}%
+              </h1>
+            </div>
           </div>
-          <div className="OCContainer">
-            <h1>Temp</h1>
-          </div>
+          {/* <div className="SContainer">
+            <SearchBar
+              placeholder="Enter Crypto Name"
+              data={coins}
+              page={page}
+            />
+          </div> */}
 
           <div className="GContainer">
             <CoinChart data={coinData} />
           </div>
           <div className="DContainer">
             <CoinData data={coinData.detail} />
+          </div>
+          <div className="NContainer">
+            <h2>{coinData.detail.name} News</h2>
+            <News data={coinData.detail.id} />
           </div>
         </div>
       </div>

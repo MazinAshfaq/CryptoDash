@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { Chart } from "chart.js";
+//import Chart from "chart.js/auto";
 import "../pages/CoinPage.css";
 
 const CoinChart = ({ data }) => {
@@ -30,16 +31,16 @@ const CoinChart = ({ data }) => {
               label: `${detail.name} Price`,
               data: timeFormat(),
               backgroundColor: "rgba(174, 305, 194, 0.5)",
-              borderColor: "rgba(101, 184, 145, 1",
+              borderColor: "rgba(101, 184, 145, .4)",
               borderWidth: 2,
               pointRadius: 0,
-              fill: false,
+              fill: true,
             },
           ],
         },
         options: {
           legend: {
-            display: true,
+            display: false,
           },
           lineHeightAnnotation: {
             always: true,
@@ -76,7 +77,22 @@ const CoinChart = ({ data }) => {
     }
   });
 
-  return <canvas ref={chartRef}></canvas>;
+  return (
+    <>
+      <div className="chart-button">
+        <button onClick={() => setTime("24h")} className="timeButton">
+          24h
+        </button>
+        <button onClick={() => setTime("7d")} className="timeButton">
+          7d
+        </button>
+        <button onClick={() => setTime("1y")} className="timeButton">
+          1y
+        </button>
+      </div>
+      <canvas ref={chartRef}></canvas>
+    </>
+  );
 };
 
 export default CoinChart;

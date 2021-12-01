@@ -2,8 +2,15 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./News.css";
 
-function News() {
+function News({ data }) {
   const [article, setArticle] = useState([]);
+
+  console.log("in news", data);
+  if (data) {
+    let coin = data.id;
+  } else {
+    let coin = crypto;
+  }
 
   const options = {
     method: "GET",

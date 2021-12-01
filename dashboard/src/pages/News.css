@@ -29,3 +29,44 @@
   padding-bottom: 10px;
   align-self: flex-end;
 }
+
+/* @media (min-width: 320px) {
+  .Page {
+    padding: 0;
+    width: 100%;
+    background: #dbd8e3;
+  }
+  .NewsPage {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .NewsPage h1 {
+    display: none;
+  }
+  .NewsPage h3:hover {
+    color: #5c5470;
+  }
+  .NewsPage h3 {
+    margin-top: 7px;
+  }
+  .NewsPage p {
+    display: none;
+  }
+  .NewsContainer {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+  }
+
+  .NewsContainer:hover {
+    color: none;
+  }
+  .NewsContainer a {
+    text-decoration: none;
+    color: black;
+  }
+  .newsImage {
+    display: none;
+  }
+} */
