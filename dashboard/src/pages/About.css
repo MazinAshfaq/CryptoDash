@@ -1,0 +1,21 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 100%;
+  background-color: #2a2438;
+}
+
+.project {
+  grid-area: 3 / 2 / 4 / 5;
+}
+
+.project {
+  margin: 25px;
+  background-color: #dbd8e3;
+  border-radius: 20px;
+  text-align: center;
+  min-width: 720px;
+}

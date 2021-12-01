@@ -9,6 +9,7 @@ import NewsPage from "./pages/NewsPage";
 import Search from "./pages/Search";
 import CoinPage from "./pages/CoinPage";
 import ContactUs from "./pages/ContactUs";
+import Trading from "./pages/Trading";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/news" element={<NewsPage />} />
           <Route path="/search" element={<Search />} />
+          <Route path="/trading" element={<Trading />} />
           <Route path="/coinpage/:id" element={<CoinPage />} />
           <Route path="/contactus" element={<ContactUs />} />
         </Routes>
