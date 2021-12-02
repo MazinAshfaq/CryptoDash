@@ -27,4 +27,47 @@ This project is focused on creating a userfriendly experience for a crypto dashb
 - Finished up final styling to the small componenets to makem look nicer.
 -
 
-Mazin Journal Comments:
+## Mazin Journal Comments:
+
+### Serious npm and project issues
+
+Ive tried deleting and reinstalling npm, node_modules, package-lock.json. npm still giving me file does not exist errors.
+
+Oh wow, my folder for the project is a google driver folder, so my dev enviorment was never able to see that I even have node.js or npm isntalled.
+Fixed by moving the folder out to my local drive where node is installed.
+
+### Axios.get issues
+
+For some reason the async is not working or axios.all is not getting all the data. Instead I am going to use
+promise.all, seems to work better. Spent 2 days trying to figure out why the chart is giving me errors saying that
+the data is invalid or undefined.
+
+### Chart.js issue
+
+Formatting the data to fit into the graph was challenging. Chart.js made some changes over the versions. Any tutorial is out
+dated and the documentation for charting time on chartjs is terrible.
+
+Was able to fix it by making sure my x and y axis were defined properly in the options for the chart.
+
+### Finished Coin Detail Page
+
+Adding lots of styling, took me a long time to move from display:flex to display:grid. Grid is so much easier to make
+the format that I want! Added the news component and the data is all being passed in as a prop perfectly.
+
+Was not able to add one component, so I just extented the header with the price to fit the whole screen.
+
+### Chart component not robust
+
+Seems like my implementation of the chart component is not that great. Its hard for me to reuse it on other parts of the web app.
+Added hard coded bitcoin chart to the home page instead, maybe future work would be to add more functionality to the chart
+component.
+
+### About Page
+
+The About page was a breath of fresh air, simple HTML and CSS, added some cool animations throughout and imported
+nice looking images to make the page look nicer.
+
+### Exchange Component
+
+Was pretty simple, adapted arafats list component so that it took in different data and displayed the exchange
+websites for each coin instead.
