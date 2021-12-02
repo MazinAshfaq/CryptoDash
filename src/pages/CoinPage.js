@@ -3,21 +3,22 @@ import { useParams } from "react-router-dom";
 import CoinData from "../components/CoinData";
 import CoinChart from "../components/CoinChart";
 import axios from "axios";
-
 import "./CoinPage.css";
 import News from "../components/News";
 
 const CoinPage = () => {
+  //Initialize States
   const { id } = useParams();
   const [coinData, setCoinData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+  const [coins, setCoins] = useState([]);
+
   let page = window.location.href;
 
   let url =
     "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=false";
 
-  const [coins, setCoins] = useState([]);
-
+  //Formata for chart
   const formatData = (data) => {
     return data.map((el) => {
       return {
@@ -27,6 +28,7 @@ const CoinPage = () => {
     });
   };
 
+  //Fetch Data
   const fetchData = async () => {
     let endpoints = [
       `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=1`,
@@ -35,6 +37,7 @@ const CoinPage = () => {
       `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${id}`,
     ];
 
+    //Returns promise of all data and maps it to set coins
     await Promise.all(endpoints.map((endpoint) => axios.get(endpoint))).then(
       ([{ data: day }, { data: week }, { data: year }, { data: detail }]) => {
         setCoinData({
@@ -52,6 +55,7 @@ const CoinPage = () => {
     fetchData();
   }, []);
 
+  //Render out data
   const renderData = () => {
     if (isLoading) {
       return <div>Loading...</div>;

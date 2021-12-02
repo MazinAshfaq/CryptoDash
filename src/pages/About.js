@@ -1,6 +1,7 @@
 import React from "react";
 import "./About.css";
 
+//Simple HTML CSS Page
 function About() {
   return (
     <div className="about-grid">

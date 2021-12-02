@@ -1,12 +1,14 @@
 import React from "react";
 import "../pages/CoinPage.css";
 
+/// Function to add commas to large number
 function formatNum(numb) {
   var str = numb.toString().split(".");
   str[0] = str[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   return str.join(".");
 }
 
+//Returns Coin Details in Nice format
 const CoinData = ({ data }) => {
   return (
     <div>

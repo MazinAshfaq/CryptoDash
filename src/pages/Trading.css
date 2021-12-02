@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(7, 1fr);
-
   height: 100%;
   background-color: #2a2438;
   align-items: center;

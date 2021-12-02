@@ -30,6 +30,7 @@ const Trading = () => {
     setSearch(e.target.value);
   };
 
+  //Fetch data
   const fetchData = async () => {
     await axios
       .get(url)
@@ -43,6 +44,7 @@ const Trading = () => {
     fetchData();
   }, []);
 
+  //Render data
   const displayCoins = filteredCoins
     .slice(pagesVisited, pagesVisited + coinsPerPage)
     .map((coin) => {

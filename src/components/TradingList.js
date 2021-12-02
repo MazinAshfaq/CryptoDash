@@ -1,6 +1,7 @@
 import React from "react";
 import "./TradingList.css";
 
+//Returns List of coins
 const TradingList = ({ name, image, url }) => {
   return (
     <div className="tcoin-container">

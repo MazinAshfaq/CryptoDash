@@ -1,6 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
 import { Chart } from "chart.js";
-//import Chart from "chart.js/auto";
 import "../pages/CoinPage.css";
 
 const CoinChart = ({ data }) => {
@@ -8,6 +7,7 @@ const CoinChart = ({ data }) => {
   const { day, week, year, detail } = data;
   const [time, setTime] = useState("24h");
 
+  //Function to change time scale
   const Format = () => {
     switch (time) {
       case "24h":
@@ -22,6 +22,7 @@ const CoinChart = ({ data }) => {
   };
 
   useEffect(() => {
+    //Create chart
     if (chartRef && chartRef.current) {
       const myChart = new Chart(chartRef.current, {
         type: "line",
@@ -72,6 +73,7 @@ const CoinChart = ({ data }) => {
         },
       });
       return () => {
+        //Make sure to destroy chart before rerendering to avoid canvas conflict
         myChart.destroy();
       };
     }
