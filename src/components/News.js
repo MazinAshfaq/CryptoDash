@@ -37,9 +37,10 @@ function News({}) {
     return (
       <a href={articles.url}>
         <div className="NewsContainer" key={articles.name}>
-          <div className="newsImage">
+          {/* <div className="newsImage">
             <img src={articles.image.thumbnail.contentUrl} alt="Crypto News" />
-          </div>
+           </div> */}
+          {/* API STOPPED RETURNING IMAGES */}
           <div className="newsText">
             <h3>{articles.name}</h3>
             <p>{articles.description}</p>
